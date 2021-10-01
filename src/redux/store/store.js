@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
 
 export default function configureStore() {
   const middleware = [thunk];
-  // rootReducer includes state for todos
+
   const store = createStore(rootReducer, applyMiddleware(...middleware));
 
   return store;
