@@ -1,9 +1,7 @@
-
-
-// TODO: import and add all reducers into an object called reducer and export it and import it in store/store
+const forecastReducer = require("./Forecast");
 
 const reducers = {
-    
-}
+  forecast: forecastReducer,
+};
 
-export default reducers; 
+export default reducers;

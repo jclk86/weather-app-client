@@ -1,4 +1,6 @@
-import { ACTIONS } from "../actions/forecast";
+import { ACTIONS } from "../actions/Forecast";
+
+// import apis
 
 const initialState = {
   forecasts: [],
@@ -15,3 +17,4 @@ export default function forecastReducer(
       return forecasts;
   }
 }
+
