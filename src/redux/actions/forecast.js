@@ -12,11 +12,9 @@ export const onGetForecasts = (zipCode) => {
     dispatch({ type: FETCH_START });
     Api.get(`api/forecast/${zipCode}`)
       .then((data) => {
-        console.log("FETCHING");
         if (data.status === 200) {
           dispatch({ type: FETCH_SUCCESS });
           dispatch({ type: GET_FORECAST, payload: data.data });
-          console.log("FINISHED FETCHING");
         } else {
           dispatch({ type: FETCH_ERROR, payload: "Something went wrong" });
         }
