@@ -29,7 +29,7 @@ const ForecastItem = ({
   let dayOfWeek = getDay(date);
 
   return (
-    <AccordionItem>
+    <AccordionItem bgColor="rgba(0,0,0,.1)">
       <h2>
         <AccordionButton fontWeight="bold">
           {icon && getIcon(icon)}
@@ -44,7 +44,7 @@ const ForecastItem = ({
           <Box>{convertKelvinToFahrenheit(temp) + " °F"}</Box>
         </AccordionButton>
       </h2>
-      <AccordionPanel pb={4}>
+      <AccordionPanel pb={4} bgColor="rgba(0,0,0,.15)">
         <Flex flexDirection="row" fontWeight="semibold">
           <Flex flex="1" flexDirection="column">
             <Box>{"Low: " + convertKelvinToFahrenheit(tempMin) + " °F"}</Box>

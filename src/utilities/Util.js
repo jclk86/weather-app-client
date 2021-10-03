@@ -39,3 +39,7 @@ export const convertKelvinToFahrenheit = (kUnit) => {
 export const convertMetersPerSectoMilesPerHour = (metersPerSecond) => {
   return Math.floor(metersPerSecond / 0.44704);
 };
+
+export const checkIfNums = (str) => {
+  return /^\d+$/.test(str);
+};

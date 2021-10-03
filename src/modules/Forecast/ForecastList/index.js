@@ -9,7 +9,7 @@ const ForecastList = ({ weatherData }) => {
   let fiveDayForecast = extractFiveDays(data);
 
   return (
-    <Accordion allowMultiple mt={{ base: "50px", md: "200px" }}>
+    <Accordion allowMultiple mt={{ base: "50px", md: "70px" }}>
       <Heading textAlign="center" color="blue">
         Five-Day Forecast
       </Heading>

@@ -9,21 +9,16 @@ const breakpoints = createBreakpoints({
   xl: "1280px",
 });
 
-// const appStyle = {
-//   styles: {
-//     global: {
-//       html: {
-//         backgroundColor: "red",
-//       },
-//     },
-//   },
-// };
-
 const theme = extendTheme({
   styles: {
     global: {
       "html, body, #root": {
         height: "100%",
+      },
+      body: {
+        backgroundImage: "linear-gradient(#7ef7eb, #7ed5f7)",
+        backgroundSize: "100%",
+        overflow: "hidden",
       },
     },
   },
