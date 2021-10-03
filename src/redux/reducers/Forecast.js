@@ -1,20 +1,20 @@
-import { ACTIONS } from "../actions/Forecast";
-
-// import apis
+import { GET_FORECAST } from "../../shared/constants/ActionTypes";
 
 const initialState = {
   forecasts: [],
 };
 
 export default function forecastReducer(
-  forecasts = initialState.forecasts,
+  state = initialState.forecasts,
   action
 ) {
   switch (action.type) {
-    case ACTIONS.FETCH_FORECAST:
-      return action.payload;
+    case GET_FORECAST:
+      return {
+        ...state,
+        forecasts: action.payload,
+      };
     default:
-      return forecasts;
+      return state;
   }
 }
-

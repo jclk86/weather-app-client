@@ -1,12 +1,23 @@
-import './App.css';
-// import the weather
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import routes from "./modules/routesConfig";
 
-function App() {
+const App = (props) => {
   return (
-    <div className="App">
-      
-    </div>
+    <Router>
+      <Switch>
+        {routes.map((route, i) => {
+          return (
+            <Route
+              exact
+              path={route.path}
+              component={route.component}
+              key={i}
+            />
+          );
+        })}
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;

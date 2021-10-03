@@ -1,6 +1,8 @@
-const forecastReducer = require("./Forecast");
+import forecastReducer from "./Forecast";
+import commonReducer from "./Common";
 
 const reducers = {
+  common: commonReducer,
   forecast: forecastReducer,
 };
 
