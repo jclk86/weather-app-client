@@ -52,6 +52,7 @@ const SearchForm = () => {
           textAlign="center"
           fontFamily="Helvetica"
           fontSize={{ base: "24px", md: "30px" }}
+          color="blue.800"
         >
           Find your local weather forecast
         </Heading>
@@ -77,7 +78,9 @@ const SearchForm = () => {
               </Button>
             </InputRightElement>
           </InputGroup>
-          <FormHelperText>Type in 5-digit, US-based zip code.</FormHelperText>
+          <FormHelperText color="black">
+            Type in 5-digit, US-based zip code.
+          </FormHelperText>
         </FormControl>
       </form>
     </Flex>
