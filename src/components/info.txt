@@ -1,0 +1,1 @@
+If the project were to be extended, this folder would include smaller components that can be reused across the application.
