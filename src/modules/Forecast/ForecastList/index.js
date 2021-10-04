@@ -4,7 +4,7 @@ import ForecastItem from "./ForecastItem";
 import { extractFiveDays } from "../../../utilities/Util";
 
 const ForecastList = ({ weatherData }) => {
-  const { uv_index, data } = weatherData.forecasts;
+  const { data } = weatherData.forecasts;
 
   let fiveDayForecast = extractFiveDays(data);
 
@@ -23,10 +23,10 @@ const ForecastList = ({ weatherData }) => {
           {"Today's UV Index:"}
         </Box>
         <Box fontWeight="semibold" fontSize="18px">
-          {uv_index}
+          {weatherData?.forecasts?.uv_index}
         </Box>
       </Flex>
-      {fiveDayForecast.map(
+      {fiveDayForecast?.map(
         ({
           date,
           main: { temp, temp_min, temp_max, humidity, feel, wind },
