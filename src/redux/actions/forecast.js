@@ -10,7 +10,7 @@ import Api from "../../services/ApiConfig";
 export const onGetForecasts = (zipCode) => {
   return (dispatch) => {
     dispatch({ type: FETCH_START });
-    Api.get(`api/forecast/${zipCode}`)
+    return Api.get(`api/forecast/${zipCode}`)
       .then((data) => {
         if (data.status === 200) {
           dispatch({ type: FETCH_SUCCESS });
